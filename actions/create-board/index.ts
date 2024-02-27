@@ -27,7 +27,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
   const canCreate = await hasAvailableCount();
 
 
-  if (!canCreate && !isPro) {
+  if (!canCreate) {
     return {
       error: "You have reached your limit of free boards. Please upgrade to create more."
     }
